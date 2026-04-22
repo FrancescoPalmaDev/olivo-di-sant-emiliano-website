@@ -46,6 +46,35 @@ function closeCart() {
 cartOverlay && cartOverlay.addEventListener('click', closeCart);
 cartClose && cartClose.addEventListener('click', closeCart);
 
+document.addEventListener('click', e => {
+  if (e.target.closest('.cart-continue')) {
+    closeCart();
+  }
+
+  if (e.target.closest('.cart-checkout')) {
+    if (cartData.length === 0) return;
+    const total = cartData.reduce((s, i) => s + i.price * i.qty, 0).toFixed(2);
+    /* Replace YOUR_PAYPAL_ME with your actual PayPal.me username */
+    const paypalUrl = `https://www.paypal.com/paypalme/YOUR_PAYPAL_ME/${total}USD`;
+    cartData.length = 0;
+    renderCart();
+    updateCartCount();
+    closeCart();
+    window.location.href = paypalUrl;
+  }
+});
+
+document.addEventListener('click', e => {
+  if (e.target.closest('.cart-continue')) closeCart();
+  if (e.target.closest('.cart-checkout')) {
+    if (cartData.length === 0) return;
+    showToast('Redirecting to checkout…');
+    setTimeout(() => {
+      window.location.href = 'shop.html';
+    }, 1000);
+  }
+});
+
 document.querySelector('.nav__cart')?.addEventListener('click', openCart);
 
 function renderCart() {
@@ -113,7 +142,6 @@ function addToCart(name, price, size, img) {
   renderCart();
   updateCartCount();
   showToast(`${name} added to cart!`);
-  openCart();
 }
 
 /* ---- Add to cart — event delegation (avoids apostrophe quoting issues) ---- */
