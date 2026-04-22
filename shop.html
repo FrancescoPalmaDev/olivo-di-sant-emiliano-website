@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop — OLIVANDO Extra Virgin Olive Oil</title>
+  <meta name="description" content="Browse our full collection of artisan extra virgin olive oils from Umbria, Italy. Single estate, hand-harvested, cold-pressed.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ NAVIGATION ============ -->
+<nav class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">OLIV<span>ANDO</span></a>
+    <ul class="nav__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="#">Journal</a></li>
+      <li><a href="#">FAQ</a></li>
+    </ul>
+    <div class="nav__actions">
+      <a href="shop.html" class="btn btn--primary">Shop Now</a>
+      <a href="#" class="nav__cart" aria-label="Cart">
+        <svg class="nav__cart-icon" viewBox="0 0 24 24">
+          <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+        </svg>
+        <span class="nav__cart-count" style="display:none">0</span>
+      </a>
+      <button class="nav__toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="nav__mobile">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="about.html">About Us</a>
+    <a href="#">Journal</a>
+    <a href="#">FAQ</a>
+  </div>
+</nav>
+
+<!-- ============ PAGE HERO ============ -->
+<section class="page-hero">
+  <div class="container page-hero__content">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      <span>Shop</span>
+    </div>
+    <span class="section-label">Umbria, Italy</span>
+    <h1>Our Collection</h1>
+    <p>Single estate extra virgin olive oils — each one cold-pressed, hand-harvested, and full of character.</p>
+  </div>
+</section>
+
+<!-- ============ SHOP ============ -->
+<section class="shop-section">
+  <div class="container">
+    <div class="shop-toolbar">
+      <span class="shop-count">Showing 6 products</span>
+      <div class="shop-sort">
+        <label for="sort">Sort by:</label>
+        <select id="sort">
+          <option>Featured</option>
+          <option>Price: Low to High</option>
+          <option>Price: High to Low</option>
+          <option>Newest</option>
+        </select>
+      </div>
+    </div>
+    <div class="shop-grid">
+
+      <!-- Product 1 -->
+      <div class="product-card">
+        <div class="product-card__img-wrap">
+          <img
+            class="product-card__img"
+            src="https://images.unsplash.com/photo-1534353473418-4cfa6c56fd38?w=700&auto=format&fit=crop&q=80"
+            alt="Olivando Classico 500ml"
+          >
+          <span class="product-card__badge">Bestseller</span>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__category">Extra Virgin Olive Oil</div>
+          <div class="product-card__name">Olivando Classico</div>
+          <p class="product-card__desc">Smooth and buttery with notes of fresh-cut grass, sweet almond, and a gentle peppery finish. Our everyday essential.</p>
+          <div class="product-card__footer">
+            <div class="product-card__price">$28 <span>/ 500ml</span></div>
+            <button class="btn btn--primary" onclick="addToCart('Olivando Classico', 28, '500ml', 'https://images.unsplash.com/photo-1534353473418-4cfa6c56fd38?w=200&auto=format&fit=crop&q=80')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card">
+        <div class="product-card__img-wrap">
+          <img
+            class="product-card__img"
+            src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&auto=format&fit=crop&q=80"
+            alt="Olivando Fresco 500ml"
+          >
+          <span class="product-card__badge product-card__badge--gold">New Harvest</span>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__category">Early Harvest EVOO</div>
+          <div class="product-card__name">Olivando Fresco</div>
+          <p class="product-card__desc">Vibrant and intensely fruity — early-harvest green olives give this oil bold aromas of artichoke, fresh herbs, and tomato leaf.</p>
+          <div class="product-card__footer">
+            <div class="product-card__price">$34 <span>/ 500ml</span></div>
+            <button class="btn btn--primary" onclick="addToCart('Olivando Fresco', 34, '500ml', 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&auto=format&fit=crop&q=80')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card">
+        <div class="product-card__img-wrap">
+          <img
+            class="product-card__img"
+            src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=700&auto=format&fit=crop&q=80"
+            alt="Olivando Intenso 250ml"
+          >
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__category">Robust EVOO</div>
+          <div class="product-card__name">Olivando Intenso</div>
+          <p class="product-card__desc">Our boldest oil — a powerful, complex flavor with intense fruitiness and a long, warming finish. Ideal for raw use on grilled meats and soups.</p>
+          <div class="product-card__footer">
+            <div class="product-card__price">$19 <span>/ 250ml</span></div>
+            <button class="btn btn--primary" onclick="addToCart('Olivando Intenso', 19, '250ml', 'https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=200&auto=format&fit=crop&q=80')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product-card">
+        <div class="product-card__img-wrap">
+          <img
+            class="product-card__img"
+            src="https://images.unsplash.com/photo-1534353473418-4cfa6c56fd38?w=700&auto=format&fit=crop&q=80&sat=-20"
+            alt="Olivando Classico 1 Litre"
+          >
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__category">Extra Virgin Olive Oil</div>
+          <div class="product-card__name">Olivando Classico 1L</div>
+          <p class="product-card__desc">Our classic blend in a larger format — ideal for passionate home cooks who use olive oil daily. Best value per milliliter.</p>
+          <div class="product-card__footer">
+            <div class="product-card__price">$48 <span>/ 1 Litre</span></div>
+            <button class="btn btn--primary" onclick="addToCart('Olivando Classico 1L', 48, '1 Litre', 'https://images.unsplash.com/photo-1534353473418-4cfa6c56fd38?w=200&auto=format&fit=crop&q=80')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="product-card">
+        <div class="product-card__img-wrap">
+          <img
+            class="product-card__img"
+            src="https://images.unsplash.com/photo-1601648764658-cf37e8c89b70?w=700&auto=format&fit=crop&q=80"
+            alt="The Umbria Trio Gift Set"
+          >
+          <span class="product-card__badge product-card__badge--gold">Gift</span>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__category">Gift Set</div>
+          <div class="product-card__name">The Umbria Trio</div>
+          <p class="product-card__desc">Three 250ml bottles — Classico, Fresco, and Intenso — in a handcrafted wooden gift box. A taste of Umbria, beautifully presented.</p>
+          <div class="product-card__footer">
+            <div class="product-card__price">$58 <span>/ set of 3</span></div>
+            <button class="btn btn--primary" onclick="addToCart('The Umbria Trio', 58, 'Gift Set', 'https://images.unsplash.com/photo-1601648764658-cf37e8c89b70?w=200&auto=format&fit=crop&q=80')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="product-card">
+        <div class="product-card__img-wrap">
+          <img
+            class="product-card__img"
+            src="https://images.unsplash.com/photo-1519996529931-28324d5a630e?w=700&auto=format&fit=crop&q=80"
+            alt="Monthly Subscription"
+          >
+          <span class="product-card__badge">Subscribe & Save</span>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__category">Subscription</div>
+          <div class="product-card__name">Monthly Harvest Box</div>
+          <p class="product-card__desc">Receive a 500ml bottle of our seasonal selection every month. Pause or cancel any time. Never run out of great olive oil again.</p>
+          <div class="product-card__footer">
+            <div class="product-card__price">$25 <span>/ month</span></div>
+            <button class="btn btn--primary" onclick="addToCart('Monthly Harvest Box', 25, '500ml/mo', 'https://images.unsplash.com/photo-1519996529931-28324d5a630e?w=200&auto=format&fit=crop&q=80')">Subscribe</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST STRIP ============ -->
+<section class="section section--cream" style="padding:48px 0;">
+  <div class="container">
+    <div class="trust-bar__inner">
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <span>Free Shipping Over $60</span>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span>100% Satisfaction Guarantee</span>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>Ships from Umbria, Italy</span>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <span>Questions? We're Here to Help</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NEWSLETTER ============ -->
+<section class="newsletter">
+  <div class="container">
+    <div class="newsletter__inner">
+      <span class="section-label">Stay Connected</span>
+      <h2 class="section-title">Join the Olivando Family</h2>
+      <p>Get harvest updates, new arrivals, and a welcome discount on your first order.</p>
+      <form class="newsletter__form">
+        <input class="newsletter__input" type="email" placeholder="Your email address" required>
+        <button class="newsletter__btn" type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <div class="footer__logo">OLIV<span>ANDO</span></div>
+        <p class="footer__tagline">Artisan Extra Virgin Olive Oil from the hills of Umbria, Italy. Hand-harvested, cold-pressed, and delivered directly to your door.</p>
+        <div class="footer__socials">
+          <a href="#" class="footer__social" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" class="footer__social" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__col-title">Shop</div>
+        <ul class="footer__links">
+          <li><a href="shop.html">All Oils</a></li>
+          <li><a href="shop.html">Classico</a></li>
+          <li><a href="shop.html">Fresco</a></li>
+          <li><a href="shop.html">Gift Sets</a></li>
+          <li><a href="shop.html">Subscriptions</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__col-title">Company</div>
+        <ul class="footer__links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="#">Journal</a></li>
+          <li><a href="#">Stockists</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__col-title">Contact</div>
+        <div class="footer__contact">
+          <p>Olivando S.r.l.<br>Umbria, Italy</p>
+          <p>hello@olivando.store</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>&copy; 2025 Olivando. All rights reserved.</span>
+    <span>Privacy Policy &nbsp;·&nbsp; Terms of Service</span>
+  </div>
+</footer>
+
+<!-- CART SIDEBAR -->
+<div class="cart-overlay"></div>
+<div class="cart-sidebar">
+  <div class="cart-sidebar__header">
+    <div class="cart-sidebar__title">Your Cart</div>
+    <button class="cart-close" aria-label="Close cart">
+      <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="cart-sidebar__body"></div>
+  <div class="cart-sidebar__footer" style="display:none">
+    <div class="cart-subtotal">
+      <span>Subtotal</span>
+      <strong>$0.00</strong>
+    </div>
+    <p style="font-size:0.78rem;color:var(--text-muted);margin-bottom:14px;">Shipping calculated at checkout.</p>
+    <button class="btn btn--primary btn--full" style="margin-bottom:10px">Proceed to Checkout</button>
+    <button class="btn btn--outline btn--full">Continue Shopping</button>
+  </div>
+</div>
+
+<div class="toast"></div>
+<script src="js/main.js"></script>
+</body>
+</html>
