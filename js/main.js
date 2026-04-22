@@ -1,5 +1,5 @@
 /* ============================================
-   OLIVANDO — Main JS
+   Olivo di Sant'Emiliano — Main JS
    ============================================ */
 
 /* ---- Navbar scroll effect ---- */
