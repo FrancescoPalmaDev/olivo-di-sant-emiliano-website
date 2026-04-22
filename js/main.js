@@ -103,7 +103,7 @@ function updateCartCount() {
   }
 }
 
-window.addToCart = function(name, price, size, img) {
+function addToCart(name, price, size, img) {
   const existing = cartData.find(i => i.name === name && i.size === size);
   if (existing) {
     existing.qty++;
@@ -114,7 +114,19 @@ window.addToCart = function(name, price, size, img) {
   updateCartCount();
   showToast(`${name} added to cart!`);
   openCart();
-};
+}
+
+/* ---- Add to cart — event delegation (avoids apostrophe quoting issues) ---- */
+document.addEventListener('click', e => {
+  const btn = e.target.closest('.add-to-cart');
+  if (!btn) return;
+  addToCart(
+    btn.dataset.name,
+    parseFloat(btn.dataset.price),
+    btn.dataset.size,
+    btn.dataset.img
+  );
+});
 
 /* ---- Toast ---- */
 function showToast(msg) {
