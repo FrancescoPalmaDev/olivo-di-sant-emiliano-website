@@ -166,7 +166,7 @@ p:last-child { margin-bottom: 0; }
   font-weight: 700;
   color: var(--green);
   letter-spacing: 0.04em;
-  flex-shrink: 0;
+  flex: 1;
 }
 .nav__logo span {
   color: var(--gold);
@@ -202,7 +202,9 @@ p:last-child { margin-bottom: 0; }
 .nav__actions {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 16px;
+  flex: 1;
 }
 .nav__cart {
   position: relative;

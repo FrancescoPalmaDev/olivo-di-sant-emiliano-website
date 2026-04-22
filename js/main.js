@@ -129,6 +129,31 @@ function showToast(msg) {
   setTimeout(() => toast.classList.remove('show'), 3000);
 }
 
+/* ---- Shop sort ---- */
+const sortSelect = document.getElementById('sort');
+if (sortSelect) {
+  const grid = document.querySelector('.shop-grid');
+
+  sortSelect.addEventListener('change', () => {
+    const cards = Array.from(grid.querySelectorAll('.product-card'));
+    const val = sortSelect.value;
+
+    cards.sort((a, b) => {
+      const priceA = parseFloat(a.dataset.price);
+      const priceB = parseFloat(b.dataset.price);
+      const idxA  = parseInt(a.dataset.index);
+      const idxB  = parseInt(b.dataset.index);
+
+      if (val === 'Price: Low to High')  return priceA - priceB;
+      if (val === 'Price: High to Low')  return priceB - priceA;
+      if (val === 'Newest')              return idxB - idxA;
+      return idxA - idxB; // Featured
+    });
+
+    cards.forEach(c => grid.appendChild(c));
+  });
+}
+
 /* ---- Newsletter ---- */
 document.querySelector('.newsletter__form')?.addEventListener('submit', e => {
   e.preventDefault();
