@@ -1215,6 +1215,8 @@ p:last-child { margin-bottom: 0; }
 /* ============================================
    RESPONSIVE
    ============================================ */
+
+/* --- Tablet landscape --- */
 @media (max-width: 1024px) {
   .pillars__grid { grid-template-columns: repeat(2, 1fr); }
   .process__steps { grid-template-columns: repeat(2, 1fr); }
@@ -1222,28 +1224,78 @@ p:last-child { margin-bottom: 0; }
   .footer__grid { grid-template-columns: 1fr 1fr; gap: 32px; }
 }
 
+/* --- Tablet portrait --- */
 @media (max-width: 860px) {
   .about-teaser__grid { grid-template-columns: 1fr; gap: 40px; }
   .about-teaser__badge { display: none; }
+  .about-teaser__img { height: 380px; }
+  .about-story__img { height: 340px; }
   .products__grid { grid-template-columns: repeat(2, 1fr); }
   .journal__grid { grid-template-columns: repeat(2, 1fr); }
   .shop-grid { grid-template-columns: repeat(2, 1fr); }
   .about-story__grid { grid-template-columns: 1fr; gap: 40px; }
+  .about-story__grid.reverse { direction: ltr; }
   .about-values__grid { grid-template-columns: repeat(2, 1fr); }
   .products__header { flex-direction: column; align-items: flex-start; }
 }
 
+/* --- Mobile (large phones) --- */
 @media (max-width: 768px) {
   .nav__links { display: none; }
   .nav__actions .btn { display: none; }
   .nav__toggle { display: flex; }
-  .hero__content { margin-left: 0; padding: 80px 24px 60px; }
-  .trust-bar__inner { gap: 20px; }
-  .section { padding: 60px 0; }
-  .cart-sidebar { width: 100%; }
+  .hero { min-height: 90vh; }
+  .hero__content { margin-left: 0; padding: 60px 24px 48px; }
+  .trust-bar { padding: 16px 0; }
+  .trust-bar__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 24px;
+    padding: 0 24px;
+    justify-items: start;
+  }
+  .section { padding: 48px 0; }
+  .about-teaser { padding: 56px 0; }
+  .products { padding: 48px 0 64px; }
+  .process { padding: 56px 0; }
+  .newsletter { padding: 40px 0; }
+  .cart-sidebar { width: 100%; right: -100%; }
 }
 
+/* --- Mobile (phones) --- */
 @media (max-width: 540px) {
+  .container { padding: 0 16px; }
+
+  /* Nav */
+  .nav__logo { font-size: 0.9rem; }
+  .nav__inner { padding: 0 16px; }
+
+  /* Hero */
+  .hero__title { font-size: 2.2rem; }
+  .hero__text { font-size: 1rem; }
+  .hero__scroll { display: none; }
+  .hero__actions { flex-direction: column; }
+  .hero__actions .btn { width: 100%; text-align: center; }
+
+  /* Trust bar — single column on small phones */
+  .trust-bar__inner { grid-template-columns: 1fr; padding: 0 16px; }
+
+  /* Sections */
+  .section { padding: 40px 0; }
+  .about-teaser { padding: 40px 0; }
+  .products { padding: 40px 0 52px; }
+  .process { padding: 40px 0; }
+  .page-hero { padding: 28px 0; }
+  .shop-section { padding: 20px 0 40px; }
+
+  /* About teaser */
+  .about-teaser__img { height: 260px; }
+  .about-teaser__stats { flex-direction: column; gap: 16px; }
+
+  /* About story */
+  .about-story__img { height: 240px; }
+
+  /* Grids — single column */
   .products__grid { grid-template-columns: 1fr; }
   .journal__grid { grid-template-columns: 1fr; }
   .shop-grid { grid-template-columns: 1fr; }
@@ -1251,11 +1303,32 @@ p:last-child { margin-bottom: 0; }
   .process__steps { grid-template-columns: 1fr; }
   .about-values__grid { grid-template-columns: 1fr; }
   .team__grid { grid-template-columns: 1fr; max-width: 320px; }
-  .hero__actions { flex-direction: column; }
-  .hero__actions .btn { width: 100%; text-align: center; }
-  .newsletter__form { flex-direction: column; }
-  .newsletter__input { border-right: 2px solid rgba(255,255,255,0.2); border-bottom: none; border-radius: var(--radius) var(--radius) 0 0; }
-  .newsletter__btn { border-radius: 0 0 var(--radius) var(--radius); }
   .footer__grid { grid-template-columns: 1fr; }
-  .about-teaser__stats { flex-direction: column; gap: 16px; }
+
+  /* Product cards — stack price + button */
+  .product-card__footer { flex-direction: column; align-items: stretch; gap: 10px; }
+  .product-card__footer .btn { width: 100%; text-align: center; }
+  .product-card__price { font-size: 1.2rem; }
+
+  /* Touch targets — qty buttons */
+  .qty-btn { width: 36px; height: 36px; font-size: 1rem; }
+
+  /* Newsletter form */
+  .newsletter__form { flex-direction: column; }
+  .newsletter__input {
+    border-right: 2px solid rgba(255,255,255,0.2);
+    border-bottom: none;
+    border-radius: var(--radius) var(--radius) 0 0;
+  }
+  .newsletter__btn { border-radius: 0 0 var(--radius) var(--radius); }
+
+  /* Footer */
+  .footer { padding: 40px 0 0; }
+  .footer__grid { gap: 28px; }
+
+  /* Shop toolbar */
+  .shop-toolbar { flex-direction: column; align-items: flex-start; gap: 12px; }
+
+  /* Toast — full width on phones */
+  .toast { left: 16px; right: 16px; text-align: center; }
 }
