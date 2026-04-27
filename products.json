@@ -33,5 +33,108 @@
     "featured": true,
     "sortIndex": 1,
     "buttonText": "Add to Cart"
+  },
+  {
+    "id": "fresco",
+    "name": "Sant'Emiliano Fresco",
+    "category": "Early Harvest EVOO",
+    "price": 34,
+    "size": "500ml",
+    "badge": "New",
+    "badgeType": "gold",
+    "image": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=700&auto=format&fit=crop&q=80",
+    "imageLg": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=900&auto=format&fit=crop&q=80",
+    "imageThumb": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=200&auto=format&fit=crop&q=80",
+    "descShort": "Intensely green and peppery — harvested early for maximum polyphenols. Bold, vivid, and alive.",
+    "descLong": "Pressed from olives harvested at the very start of the season before full ripeness, Fresco captures the oil at its most vibrant. Intensely green with a sharp peppery finish and high polyphenol content — the choice for drizzling raw over soups, bruschetta, and carpaccio.",
+    "variants": [
+      { "size": "500ml", "price": 34 },
+      { "size": "250ml", "price": 22 }
+    ],
+    "specs": [
+      { "label": "Olive Varieties", "value": "Moraiolo" },
+      { "label": "Origin",          "value": "Trevi Valley, Umbria, Italy" },
+      { "label": "Harvest",         "value": "Early October 2024" },
+      { "label": "Extraction",      "value": "Cold-pressed within 24h of harvest" }
+    ],
+    "highlightsLabel": "Tasting Profile",
+    "highlightsTitle": "What You'll Taste",
+    "highlights": [
+      { "label": "Aroma",  "title": "Freshly Cut Herbs", "text": "A vivid, green-forward scent with hints of artichoke and fresh tomato leaf.", "icon": "shield" },
+      { "label": "Palate", "title": "Bold & Vivid",      "text": "Full-bodied with a pronounced bitterness — a sign of high polyphenol content.", "icon": "drop" },
+      { "label": "Finish", "title": "Sharp Pepper",      "text": "A strong peppery kick that lingers — the signature of a true early harvest oil.", "icon": "star" }
+    ],
+    "featured": true,
+    "sortIndex": 2,
+    "buttonText": "Add to Cart"
+  },
+  {
+    "id": "delicato",
+    "name": "Sant'Emiliano Delicato",
+    "category": "Extra Virgin Olive Oil",
+    "price": 26,
+    "size": "500ml",
+    "badge": "",
+    "badgeType": "",
+    "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&auto=format&fit=crop&q=80",
+    "imageLg": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&auto=format&fit=crop&q=80",
+    "imageThumb": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&auto=format&fit=crop&q=80",
+    "descShort": "Mild and golden — gentle on the palate with floral notes and a sweet finish. Perfect for delicate dishes.",
+    "descLong": "Pressed from late-harvest Leccino olives, Delicato is our most approachable oil. Pale golden in colour with a light, floral character and a sweet, almost buttery finish with no bitterness. Ideal for light fish, steamed vegetables, and desserts.",
+    "variants": [
+      { "size": "1L",    "price": 44 },
+      { "size": "500ml", "price": 26 },
+      { "size": "250ml", "price": 16 }
+    ],
+    "specs": [
+      { "label": "Olive Varieties", "value": "Leccino" },
+      { "label": "Origin",          "value": "Trevi Valley, Umbria, Italy" },
+      { "label": "Harvest",         "value": "November 2024" },
+      { "label": "Extraction",      "value": "Cold-pressed within 24h of harvest" }
+    ],
+    "highlightsLabel": "Tasting Profile",
+    "highlightsTitle": "What You'll Taste",
+    "highlights": [
+      { "label": "Aroma",  "title": "Floral & Golden",   "text": "Delicate scent of ripe fruit, wildflowers, and a hint of almond.", "icon": "shield" },
+      { "label": "Palate", "title": "Soft & Sweet",      "text": "Light-bodied with a smooth, almost sweet quality — zero bitterness.", "icon": "drop" },
+      { "label": "Finish", "title": "Clean & Lingering", "text": "A clean, barely-there warmth that fades gently without sharpness.", "icon": "star" }
+    ],
+    "featured": false,
+    "sortIndex": 3,
+    "buttonText": "Add to Cart"
+  },
+  {
+    "id": "intenso",
+    "name": "Sant'Emiliano Intenso",
+    "category": "Extra Virgin Olive Oil",
+    "price": 32,
+    "size": "500ml",
+    "badge": "Limited",
+    "badgeType": "green",
+    "image": "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=700&auto=format&fit=crop&q=80",
+    "imageLg": "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=900&auto=format&fit=crop&q=80",
+    "imageThumb": "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=200&auto=format&fit=crop&q=80",
+    "descShort": "Rich and robust — a powerful oil with deep olive character. For those who want flavour they can feel.",
+    "descLong": "Made exclusively from Moraiolo olives at peak ripeness, Intenso is our most powerful expression. Dark green, dense, and richly aromatic — with a deep olive bitterness and a long, warm finish. The oil of choice for grilled meats, legumes, and aged cheeses.",
+    "variants": [
+      { "size": "500ml", "price": 32 },
+      { "size": "250ml", "price": 20 }
+    ],
+    "specs": [
+      { "label": "Olive Varieties", "value": "Moraiolo" },
+      { "label": "Origin",          "value": "Trevi Valley, Umbria, Italy" },
+      { "label": "Harvest",         "value": "October 2024" },
+      { "label": "Extraction",      "value": "Cold-pressed within 24h of harvest" }
+    ],
+    "highlightsLabel": "Tasting Profile",
+    "highlightsTitle": "What You'll Taste",
+    "highlights": [
+      { "label": "Aroma",  "title": "Deep & Earthy",     "text": "Rich scent of ripe olive, dried herbs, and a touch of dark leafy greens.", "icon": "shield" },
+      { "label": "Palate", "title": "Bold & Robust",     "text": "Full, dense body with a pronounced bitterness and powerful olive character.", "icon": "drop" },
+      { "label": "Finish", "title": "Long & Warm",       "text": "A sustained, warming finish that coats the throat — intense and memorable.", "icon": "star" }
+    ],
+    "featured": false,
+    "sortIndex": 4,
+    "buttonText": "Add to Cart"
   }
 ]
