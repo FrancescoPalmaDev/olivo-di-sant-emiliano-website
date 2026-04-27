@@ -183,8 +183,8 @@ function renderRecommended(products, currentId) {
       <a href="product.html?id=${esc(p.id)}" class="rec-card__img-wrap">
         <img src="${esc(p.image)}" alt="${esc(p.name)}" class="rec-card__img" loading="lazy">
         <div class="rec-card__overlay">
-          <span class="rec-card__price">from $${minPrice}</span>
           <span class="rec-card__name">${esc(p.name)}</span>
+          <span class="rec-card__price">from $${minPrice}</span>
         </div>
       </a>
       <div class="rec-card__footer">
