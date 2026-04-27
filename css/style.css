@@ -1618,13 +1618,23 @@ a.product-card__name:hover { color: var(--green); }
 }
 
 /* ---- Other Products slider ---- */
-.recommended { padding: 64px 0; background: var(--cream); }
+.recommended { padding: 64px 0; background: #fff; }
 .recommended__title {
+  display: flex;
+  align-items: center;
+  gap: 20px;
   font-family: var(--font-serif);
   font-size: 1.4rem;
   font-weight: 700;
   color: var(--text);
   margin-bottom: 40px;
+}
+.recommended__title::before,
+.recommended__title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
 }
 .recommended__slider-wrap {
   display: flex;
