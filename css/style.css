@@ -1373,7 +1373,7 @@ a.product-card__name:hover { color: var(--green); }
 /* ============================================
    PRODUCT DETAIL PAGE
    ============================================ */
-.product-detail { padding: calc(88px + 24px) 0 80px; }
+.product-detail { padding: calc(88px + 24px) 0 40px; }
 .product-detail__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1605,7 +1605,7 @@ a.product-card__name:hover { color: var(--green); }
 }
 
 /* ---- Other Products slider ---- */
-.recommended { padding: 64px 0; background: #fff; }
+.recommended { padding: 32px 0 64px; background: #fff; }
 .recommended__title {
   display: flex;
   align-items: center;
@@ -1711,6 +1711,8 @@ a.product-card__name:hover { color: var(--green); }
 .rec-card__atc:hover { background: var(--green-dark); }
 .rec-arrow {
   flex-shrink: 0;
+  align-self: flex-start;
+  margin-top: calc(240px / 2 - 24px);
   width: 48px;
   height: 48px;
   background: transparent;
