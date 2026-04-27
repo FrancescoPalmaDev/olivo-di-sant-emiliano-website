@@ -166,6 +166,7 @@ p:last-child { margin-bottom: 0; }
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
   height: 88px;
   padding: 0 24px;
   max-width: var(--max-w);
@@ -173,12 +174,15 @@ p:last-child { margin-bottom: 0; }
   transition: height 0.45s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav__logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
   font-family: var(--font-serif);
   font-size: 1.2rem;
   font-weight: 700;
   color: var(--green);
   letter-spacing: 0.01em;
-  flex: 1;
   transition: font-size 0.45s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav__logo span {
