@@ -1584,6 +1584,114 @@ a.product-card__name:hover { color: var(--green); }
   line-height: 1.55;
 }
 
+/* ---- Recommended products ---- */
+.recommended { padding: 64px 0; background: #fff; }
+.recommended__title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--green);
+  margin-bottom: 32px;
+}
+.recommended__slider-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.recommended__overflow {
+  flex: 1;
+  overflow: hidden;
+}
+.recommended__track {
+  display: flex;
+  transition: transform .4s cubic-bezier(.25,.46,.45,.94);
+}
+.rec-card {
+  flex: 0 0 calc(100% / 3);
+  padding: 0 16px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.rec-card__img-wrap {
+  display: block;
+  position: relative;
+  padding: 32px 16px 24px;
+  margin-bottom: 18px;
+}
+.rec-card__blob {
+  position: absolute;
+  width: 170px;
+  height: 170px;
+  background: #e8f2dc;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+.rec-card__img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 160px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.rec-card__name {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--green);
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  line-height: 1.4;
+  margin-bottom: 8px;
+  text-decoration: none;
+}
+.rec-card__name:hover { text-decoration: underline; }
+.rec-card__price {
+  font-size: 0.95rem;
+  color: var(--text);
+  font-weight: 500;
+}
+.rec-arrow {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: .7;
+  transition: opacity .2s;
+}
+.rec-arrow:hover { opacity: 1; }
+.rec-arrow svg { width: 22px; height: 22px; }
+.recommended__dots {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 28px;
+}
+.rec-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: var(--border);
+  cursor: pointer;
+  padding: 0;
+  transition: background .2s;
+}
+.rec-dot.active { background: var(--green); }
+@media (max-width: 960px) { .rec-card { flex-basis: calc(100% / 2); } }
+@media (max-width: 600px) { .rec-card { flex-basis: 100%; } }
+
 /* Responsive — product detail */
 @media (max-width: 860px) {
   .product-detail__grid { grid-template-columns: 1fr; gap: 40px; }

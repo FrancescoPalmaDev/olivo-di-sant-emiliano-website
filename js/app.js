@@ -148,6 +148,59 @@ function renderProductDetail(products) {
       <div class="highlight-card__title">${esc(h.title)}</div>
       <p class="highlight-card__text">${esc(h.text)}</p>
     </div>`).join(''));
+
+  /* Recommended */
+  renderRecommended(products, id);
+}
+
+/* ---- Recommended products slider ---- */
+function renderRecommended(products, currentId) {
+  const others = products.filter(p => p.id !== currentId);
+  const section = document.getElementById('recommended-section');
+  if (!section) return;
+  if (others.length === 0) { section.style.display = 'none'; return; }
+  section.style.display = '';
+
+  const track  = document.getElementById('rec-track');
+  const dotsEl = document.getElementById('rec-dots');
+  const total  = others.length;
+  let cur = 0;
+
+  track.innerHTML = others.map(p => {
+    const minPrice = p.variants ? Math.min(...p.variants.map(v => v.price)) : p.price;
+    return `
+    <div class="rec-card">
+      <a href="product.html?id=${esc(p.id)}" class="rec-card__img-wrap">
+        <div class="rec-card__blob"></div>
+        <img src="${esc(p.image)}" alt="${esc(p.name)}" class="rec-card__img" loading="lazy">
+      </a>
+      <a href="product.html?id=${esc(p.id)}" class="rec-card__name">${esc(p.name)}</a>
+      <div class="rec-card__price">from $${minPrice}</div>
+    </div>`;
+  }).join('');
+
+  dotsEl.innerHTML = Array.from({length: total}, (_, i) =>
+    `<button class="rec-dot${i === 0 ? ' active' : ''}" data-i="${i}"></button>`).join('');
+
+  function perPage() {
+    return window.innerWidth < 600 ? 1 : window.innerWidth < 960 ? 2 : 3;
+  }
+
+  function go(idx) {
+    const pp  = perPage();
+    const max = Math.max(0, total - pp);
+    cur = Math.max(0, Math.min((idx + total) % (max + 1), max));
+    track.style.transform = `translateX(calc(-${cur} * (100% / ${pp})))`;
+    dotsEl.querySelectorAll('.rec-dot').forEach((d, i) => d.classList.toggle('active', i === cur));
+  }
+
+  section.querySelector('.rec-arrow--prev').addEventListener('click', () => go(cur - 1));
+  section.querySelector('.rec-arrow--next').addEventListener('click', () => go(cur + 1));
+  dotsEl.addEventListener('click', e => {
+    const d = e.target.closest('.rec-dot');
+    if (d) go(+d.dataset.i);
+  });
+  window.addEventListener('resize', () => go(cur));
 }
 
 /* ---- Variant selection on product detail page ---- */
