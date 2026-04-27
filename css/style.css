@@ -1627,10 +1627,15 @@ a.product-card__name:hover { color: var(--green); }
   margin-bottom: 40px;
 }
 .recommended__slider-wrap {
-  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 .recommended__overflow {
+  flex: 1;
   overflow: hidden;
+  max-width: 78%;
+  margin: 0 auto;
 }
 .recommended__track {
   display: flex;
@@ -1708,10 +1713,7 @@ a.product-card__name:hover { color: var(--green); }
 }
 .rec-card__atc:hover { background: var(--green-dark); }
 .rec-arrow {
-  position: absolute;
-  top: calc(240px / 2);
-  transform: translateY(-50%);
-  z-index: 10;
+  flex-shrink: 0;
   width: 48px;
   height: 48px;
   background: transparent;
@@ -1724,8 +1726,6 @@ a.product-card__name:hover { color: var(--green); }
   justify-content: center;
   transition: background .25s ease, box-shadow .25s ease, color .25s ease;
 }
-.rec-arrow--prev { left: 8px; }
-.rec-arrow--next { right: 8px; }
 .rec-arrow:hover {
   background: rgba(255,255,255,0.92);
   box-shadow: 0 4px 16px rgba(0,0,0,.12);
