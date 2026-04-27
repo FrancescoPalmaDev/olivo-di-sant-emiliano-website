@@ -214,20 +214,6 @@ document.addEventListener('click', e => {
   window.location.href = `https://www.paypal.com/paypalme/YOUR_PAYPAL_ME/${price}USD`;
 });
 
-/* ---- Footer scale on scroll ---- */
-const footerEl = document.querySelector('.footer');
-if (footerEl) {
-  const tickFooter = () => {
-    const rect = footerEl.getBoundingClientRect();
-    const winH = window.innerHeight;
-    const progress = Math.max(0, Math.min(1, (winH - rect.top) / (winH * 0.5)));
-    const scale = 1.05 - 0.05 * progress;
-    footerEl.style.transform = `scale(${scale.toFixed(4)})`;
-  };
-  window.addEventListener('scroll', tickFooter, { passive: true });
-  tickFooter();
-}
-
 /* ---- Init ---- */
 updateCartCount();
 renderCart();
