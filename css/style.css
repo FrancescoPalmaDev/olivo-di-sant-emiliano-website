@@ -1670,6 +1670,7 @@ a.product-card__name:hover { color: var(--green); }
   padding: 12px 12px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 8px;
 }
 .rec-card__price {
