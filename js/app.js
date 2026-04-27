@@ -113,8 +113,6 @@ function renderProductDetail(products) {
       </div>`);
   }
 
-  set('pd-desc', p.descLong);
-
   /* Image */
   const img = document.getElementById('pd-image');
   if (img) { img.src = p.imageLg; img.alt = p.name; }

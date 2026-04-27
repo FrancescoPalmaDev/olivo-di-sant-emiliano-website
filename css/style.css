@@ -1505,7 +1505,7 @@ a.product-card__name:hover { color: var(--green); }
 .product-detail__actions .btn--primary:hover { background: var(--green-dark); box-shadow: 0 4px 16px rgba(59,83,35,.2); }
 .product-detail__actions .btn--gold { background: var(--gold); }
 .product-detail__actions .btn--gold:hover { background: var(--gold-light); box-shadow: 0 4px 16px rgba(201,168,76,.2); }
-.product-specs { border-top: 1px solid var(--border); padding-top: 28px; }
+.product-specs { margin-bottom: 28px; }
 .product-specs__title {
   font-family: var(--font-serif);
   font-size: 1.05rem;
