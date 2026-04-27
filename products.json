@@ -1,0 +1,209 @@
+[
+  {
+    "id": "classico",
+    "name": "Sant'Emiliano Classico",
+    "category": "Extra Virgin Olive Oil",
+    "price": 28,
+    "size": "500ml",
+    "badge": "Bestseller",
+    "badgeType": "green",
+    "image": "https://images.unsplash.com/photo-1534353473418-4cfa6c56fd38?w=700&auto=format&fit=crop&q=80",
+    "imageLg": "https://images.unsplash.com/photo-1534353473418-4cfa6c56fd38?w=900&auto=format&fit=crop&q=80",
+    "imageThumb": "https://images.unsplash.com/photo-1534353473418-4cfa6c56fd38?w=200&auto=format&fit=crop&q=80",
+    "descShort": "Smooth and buttery with notes of fresh-cut grass, sweet almond, and a gentle peppery finish. Our everyday essential.",
+    "descLong": "Our signature blend, crafted from a careful selection of Moraiolo, Frantoio, and Leccino olives harvested at peak ripeness from our family grove in the Trevi valley. Smooth and buttery on the palate, with delicate notes of fresh-cut grass, sweet almond, and a pleasingly gentle peppery finish. Versatile enough for everything from salad dressings to a simple drizzle over bread — this is the oil we reach for every single day.",
+    "specs": [
+      { "label": "Volume",          "value": "500ml" },
+      { "label": "Olive Varieties", "value": "Moraiolo, Frantoio, Leccino" },
+      { "label": "Origin",          "value": "Trevi Valley, Umbria, Italy" },
+      { "label": "Harvest",         "value": "October – November 2024" },
+      { "label": "Extraction",      "value": "Cold-pressed within 24h of harvest" },
+      { "label": "Free Acidity",    "value": "< 0.3%" },
+      { "label": "Best Used For",   "value": "Salads, pasta, grilled vegetables, bread" },
+      { "label": "Shipping",        "value": "Free on orders over $60" }
+    ],
+    "highlightsLabel": "Tasting Profile",
+    "highlightsTitle": "What You'll Taste",
+    "highlights": [
+      { "label": "Aroma",  "title": "Fresh Grass & Almond", "text": "Clean, inviting scent of freshly cut grass with a warm undertone of sweet almond.", "icon": "shield" },
+      { "label": "Palate", "title": "Buttery & Smooth",     "text": "A soft, round texture with a clean buttery quality that coats the palate gently.", "icon": "drop" },
+      { "label": "Finish", "title": "Gentle Pepper",        "text": "A subtle, pleasing warmth at the back of the throat — the hallmark of a quality extra virgin.", "icon": "star" }
+    ],
+    "featured": true,
+    "sortIndex": 1,
+    "buttonText": "Add to Cart"
+  },
+
+  {
+    "id": "fresco",
+    "name": "Sant'Emiliano Fresco",
+    "category": "Early Harvest EVOO",
+    "price": 34,
+    "size": "500ml",
+    "badge": "New Harvest",
+    "badgeType": "gold",
+    "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&auto=format&fit=crop&q=80",
+    "imageLg": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&auto=format&fit=crop&q=80",
+    "imageThumb": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&auto=format&fit=crop&q=80",
+    "descShort": "Vibrant and intensely fruity — early-harvest green olives give this oil bold aromas of artichoke, fresh herbs, and tomato leaf.",
+    "descLong": "Made exclusively from Moraiolo olives picked in the very first days of October — before the fruit fully ripens, when polyphenol levels are at their highest. The result is an intensely vibrant oil that bursts with aromas of fresh artichoke, tomato leaf, and cut herbs, followed by a bold, lasting pepper on the finish. This is a connoisseur's oil: powerful enough to transform a simple bruschetta, yet complex enough to appreciate on its own. Every batch is limited to the yield of a single early picking.",
+    "specs": [
+      { "label": "Volume",        "value": "500ml" },
+      { "label": "Olive Variety", "value": "Moraiolo (early harvest)" },
+      { "label": "Origin",        "value": "Trevi Valley, Umbria, Italy" },
+      { "label": "Harvest",       "value": "Early October 2024 (green olives)" },
+      { "label": "Extraction",    "value": "Cold-pressed within 12h of harvest" },
+      { "label": "Free Acidity",  "value": "< 0.2%" },
+      { "label": "Best Used For", "value": "Bruschetta, grilled fish, raw finishing" },
+      { "label": "Shipping",      "value": "Free on orders over $60" }
+    ],
+    "highlightsLabel": "Tasting Profile",
+    "highlightsTitle": "What You'll Taste",
+    "highlights": [
+      { "label": "Aroma",  "title": "Artichoke & Tomato Leaf", "text": "Intensely green and vegetal — the unmistakable scent of freshly pressed early-harvest olives.", "icon": "shield" },
+      { "label": "Palate", "title": "Vibrant & Fruity",        "text": "Bright, lively fruitiness with a rich texture and clean, fresh herb character throughout.", "icon": "code" },
+      { "label": "Finish", "title": "Bold Pepper",             "text": "A long, assertive peppery warmth — a sign of the high polyphenol content in early-harvest oil.", "icon": "star" }
+    ],
+    "featured": true,
+    "sortIndex": 2,
+    "buttonText": "Add to Cart"
+  },
+
+  {
+    "id": "intenso",
+    "name": "Sant'Emiliano Intenso",
+    "category": "Robust EVOO",
+    "price": 19,
+    "size": "250ml",
+    "badge": "",
+    "badgeType": "",
+    "image": "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=700&auto=format&fit=crop&q=80",
+    "imageLg": "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=900&auto=format&fit=crop&q=80",
+    "imageThumb": "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=200&auto=format&fit=crop&q=80",
+    "descShort": "Our boldest oil — a powerful, complex flavor with intense fruitiness and a long, warming finish. Ideal for raw use on grilled meats and soups.",
+    "descLong": "Made entirely from 100% Moraiolo olives, a variety renowned across Umbria for its bold, assertive character. Pressed from olives harvested slightly later in the season when the fruit is at its most complex, Intenso delivers a rich, layered flavor of wild herbs, ripe olive fruit, and dark spice, followed by a long, warming finish that lingers on the palate. Designed for use raw — a drizzle over a ribollita, grilled bistecca, or a plate of aged pecorino transforms the dish entirely.",
+    "specs": [
+      { "label": "Volume",        "value": "250ml" },
+      { "label": "Olive Variety", "value": "Moraiolo (100%)" },
+      { "label": "Origin",        "value": "Trevi Valley, Umbria, Italy" },
+      { "label": "Harvest",       "value": "Late October 2024" },
+      { "label": "Extraction",    "value": "Cold-pressed within 24h of harvest" },
+      { "label": "Free Acidity",  "value": "< 0.4%" },
+      { "label": "Best Used For", "value": "Grilled meats, soups, aged cheese, raw finishing" },
+      { "label": "Shipping",      "value": "Free on orders over $60" }
+    ],
+    "highlightsLabel": "Tasting Profile",
+    "highlightsTitle": "What You'll Taste",
+    "highlights": [
+      { "label": "Aroma",  "title": "Wild Herbs & Olive Fruit", "text": "Deep, earthy aromas of wild rosemary, sage, and ripe olive fruit with a hint of dark spice.", "icon": "shield" },
+      { "label": "Palate", "title": "Complex & Full-Bodied",    "text": "Rich and layered — a powerful fruitiness with a round, dense texture that commands attention.", "icon": "code" },
+      { "label": "Finish", "title": "Long Warming Heat",        "text": "A sustained, warming pepper that unfolds slowly — a finish that lingers long after the last bite.", "icon": "star" }
+    ],
+    "featured": false,
+    "sortIndex": 3,
+    "buttonText": "Add to Cart"
+  },
+
+  {
+    "id": "classico-1l",
+    "name": "Sant'Emiliano Classico 1L",
+    "category": "Extra Virgin Olive Oil",
+    "price": 48,
+    "size": "1 Litre",
+    "badge": "",
+    "badgeType": "",
+    "image": "https://images.unsplash.com/photo-1534353473418-4cfa6c56fd38?w=700&auto=format&fit=crop&q=80&sat=-20",
+    "imageLg": "https://images.unsplash.com/photo-1534353473418-4cfa6c56fd38?w=900&auto=format&fit=crop&q=80&sat=-20",
+    "imageThumb": "https://images.unsplash.com/photo-1534353473418-4cfa6c56fd38?w=200&auto=format&fit=crop&q=80",
+    "descShort": "Our classic blend in a larger format — ideal for passionate home cooks who use olive oil daily. Best value per milliliter.",
+    "descLong": "Everything you love about our Classico — the same smooth, buttery blend of Moraiolo, Frantoio, and Leccino olives from our Trevi valley grove — in a larger format made for kitchens that take olive oil seriously. If you cook daily and refuse to compromise on quality, this is the bottle for you. At $48 per litre it represents our best value per millilitre, and with a properly sealed bottle stored away from heat and light, it stays fresh for up to 18 months. Stock up once, cook well all year.",
+    "specs": [
+      { "label": "Volume",          "value": "1 Litre (1,000ml)" },
+      { "label": "Olive Varieties", "value": "Moraiolo, Frantoio, Leccino" },
+      { "label": "Origin",          "value": "Trevi Valley, Umbria, Italy" },
+      { "label": "Harvest",         "value": "October – November 2024" },
+      { "label": "Extraction",      "value": "Cold-pressed within 24h of harvest" },
+      { "label": "Free Acidity",    "value": "< 0.3%" },
+      { "label": "Best Used For",   "value": "Everyday cooking, salads, pasta, roasting" },
+      { "label": "Shipping",        "value": "Free on orders over $60" }
+    ],
+    "highlightsLabel": "Why the 1 Litre",
+    "highlightsTitle": "Made for the Everyday Cook",
+    "highlights": [
+      { "label": "Best Value",    "title": "$4.80 per 100ml",           "text": "The lowest cost per millilitre across our range — the smart choice for daily cooking without compromise.", "icon": "star" },
+      { "label": "Same Quality",  "title": "Identical Oil, Larger Format", "text": "Exactly the same blend as our 500ml Classico — cold-pressed from the same harvest, same grove, same standard.", "icon": "shield" },
+      { "label": "Long Shelf Life", "title": "Stays Fresh up to 18 Months", "text": "Properly sealed and stored away from light and heat, this bottle stays at its best for up to 18 months.", "icon": "clock" }
+    ],
+    "featured": false,
+    "sortIndex": 4,
+    "buttonText": "Add to Cart"
+  },
+
+  {
+    "id": "trio",
+    "name": "The Umbria Trio",
+    "category": "Gift Set",
+    "price": 58,
+    "size": "set of 3",
+    "badge": "Gift",
+    "badgeType": "gold",
+    "image": "https://images.unsplash.com/photo-1601648764658-cf37e8c89b70?w=700&auto=format&fit=crop&q=80",
+    "imageLg": "https://images.unsplash.com/photo-1601648764658-cf37e8c89b70?w=900&auto=format&fit=crop&q=80",
+    "imageThumb": "https://images.unsplash.com/photo-1601648764658-cf37e8c89b70?w=200&auto=format&fit=crop&q=80",
+    "descShort": "Three 250ml bottles — Classico, Fresco, and Intenso — in a handcrafted wooden gift box. A taste of Umbria, beautifully presented.",
+    "descLong": "Three distinct expressions of our Trevi valley grove, each telling a different part of the same story. The Umbria Trio brings together 250ml bottles of our Classico, Fresco, and Intenso — the full range of what Umbrian olive oil can be — presented in a handcrafted wooden box with a personal card. It is the gift we would want to receive ourselves: beautiful, meaningful, and utterly delicious. Whether for a passionate cook, a curious food lover, or someone who simply deserves something exceptional, this is Umbria in a box.",
+    "specs": [
+      { "label": "Classico 250ml",  "value": "Smooth, buttery — the everyday essential" },
+      { "label": "Fresco 250ml",    "value": "Vibrant, early-harvest — bold and green" },
+      { "label": "Intenso 250ml",   "value": "Robust, complex — for raw finishing" },
+      { "label": "Packaging",       "value": "Handcrafted wooden gift box + card" },
+      { "label": "Origin",          "value": "Trevi Valley, Umbria, Italy" },
+      { "label": "Total Volume",    "value": "750ml (3 × 250ml)" },
+      { "label": "Shipping",        "value": "Free — qualifies automatically" }
+    ],
+    "highlightsLabel": "Three Oils, One Story",
+    "highlightsTitle": "A Complete Taste of Umbria",
+    "highlights": [
+      { "label": "Included", "title": "Classico — The Everyday", "text": "Smooth, buttery, and versatile. Notes of fresh grass and almond with a gentle pepper finish.", "icon": "shield" },
+      { "label": "Included", "title": "Fresco — The Bold",       "text": "Intensely green and vibrant. Early-harvest Moraiolo with artichoke, fresh herbs, and assertive pepper.", "icon": "code" },
+      { "label": "Included", "title": "Intenso — The Robust",    "text": "Powerful and complex. Wild herbs, full-bodied fruitiness, and a long warming finish for raw finishing.", "icon": "star" }
+    ],
+    "featured": true,
+    "sortIndex": 5,
+    "buttonText": "Add to Cart"
+  },
+
+  {
+    "id": "harvest-box",
+    "name": "Monthly Harvest Box",
+    "category": "Subscription",
+    "price": 25,
+    "size": "500ml/mo",
+    "badge": "Subscribe & Save",
+    "badgeType": "green",
+    "image": "https://images.unsplash.com/photo-1519996529931-28324d5a630e?w=700&auto=format&fit=crop&q=80",
+    "imageLg": "https://images.unsplash.com/photo-1519996529931-28324d5a630e?w=900&auto=format&fit=crop&q=80",
+    "imageThumb": "https://images.unsplash.com/photo-1519996529931-28324d5a630e?w=200&auto=format&fit=crop&q=80",
+    "descShort": "Receive a 500ml bottle of our seasonal selection every month. Pause or cancel any time. Never run out of great olive oil again.",
+    "descLong": "Each month we select the oil best suited to the season — a different expression, a different story, always from our grove in Umbria. Some months it will be the smooth everyday Classico; others, a limited-batch early harvest or a special reserve we've been keeping back. You'll receive a 500ml bottle with a short note explaining the oil, the harvest conditions, and our suggestion for how to use it. No long commitments — pause or cancel any time from your account. This is the easiest way to keep your kitchen stocked with genuinely great olive oil.",
+    "specs": [
+      { "label": "What You Receive", "value": "500ml of our seasonal selection" },
+      { "label": "Frequency",        "value": "Once per month" },
+      { "label": "Price",            "value": "$25 / month (free shipping always)" },
+      { "label": "Origin",           "value": "Trevi Valley, Umbria, Italy" },
+      { "label": "Included",         "value": "500ml bottle + tasting card" },
+      { "label": "Commitment",       "value": "None — pause or cancel any time" },
+      { "label": "Shipping",         "value": "Always free, every month" }
+    ],
+    "highlightsLabel": "How It Works",
+    "highlightsTitle": "Simple, Flexible, Delicious",
+    "highlights": [
+      { "label": "Step 1",   "title": "Subscribe Today",         "text": "Sign up once and your first 500ml bottle ships within a few days. No long-form commitment required.", "icon": "home" },
+      { "label": "Step 2",   "title": "Receive Monthly",         "text": "A fresh bottle arrives every month with a tasting card about the oil, its harvest, and our serving suggestions.", "icon": "arrow" },
+      { "label": "Flexible", "title": "Pause or Cancel Anytime", "text": "Going away? Stocked up? Pause or cancel with a single click — no questions, no penalties, no minimum term.", "icon": "question" }
+    ],
+    "featured": false,
+    "sortIndex": 6,
+    "buttonText": "Subscribe"
+  }
+]
