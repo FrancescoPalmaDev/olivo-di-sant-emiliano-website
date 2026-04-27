@@ -825,6 +825,9 @@ a.product-card__name:hover { color: var(--green); }
   background: #1C2914;
   color: rgba(255,255,255,0.7);
   padding: 64px 0 0;
+  transform-origin: center bottom;
+  will-change: transform;
+  transition: transform 0.12s linear;
 }
 .footer__grid {
   display: grid;
