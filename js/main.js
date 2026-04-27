@@ -26,7 +26,8 @@ if (toggle && mobileMenu) {
 }
 
 /* ---- Cart ---- */
-const cartData = [];
+const cartData = JSON.parse(localStorage.getItem('cart') || '[]');
+function saveCart() { localStorage.setItem('cart', JSON.stringify(cartData)); }
 const cartOverlay = document.querySelector('.cart-overlay');
 const cartSidebar = document.querySelector('.cart-sidebar');
 const cartClose = document.querySelector('.cart-close');
@@ -57,6 +58,7 @@ document.addEventListener('click', e => {
     /* Replace YOUR_PAYPAL_ME with your actual PayPal.me username */
     const paypalUrl = `https://www.paypal.com/paypalme/YOUR_PAYPAL_ME/${total}USD`;
     cartData.length = 0;
+    saveCart();
     renderCart();
     updateCartCount();
     closeCart();
@@ -120,6 +122,7 @@ function renderCart() {
 window.changeQty = function(i, delta) {
   cartData[i].qty += delta;
   if (cartData[i].qty <= 0) cartData.splice(i, 1);
+  saveCart();
   renderCart();
   updateCartCount();
 };
@@ -139,6 +142,7 @@ function addToCart(name, price, size, img, qty = 1) {
   } else {
     cartData.push({ name, price, size, img, qty });
   }
+  saveCart();
   renderCart();
   updateCartCount();
   showToast(`${name} added to cart!`);
