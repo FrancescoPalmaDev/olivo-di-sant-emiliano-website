@@ -1673,7 +1673,7 @@ a.product-card__name:hover { color: var(--green); }
   white-space: nowrap;
 }
 .rec-card__footer {
-  padding: 10px 5%;
+  padding: 14px 5% 4px;
 }
 .rec-card__atc {
   display: block;
