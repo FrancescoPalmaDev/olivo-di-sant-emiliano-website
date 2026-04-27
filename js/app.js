@@ -93,18 +93,6 @@ function renderProductDetail(products) {
   const set = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val; };
   const setHTML = (id, val) => { const el = document.getElementById(id); if (el) el.innerHTML = val; };
 
-  /* Badge */
-  const badge = document.getElementById('pd-badge');
-  if (badge) {
-    if (p.badge) {
-      badge.textContent = p.badge;
-      badge.style.display = '';
-      if (p.badgeType === 'gold') badge.classList.add('product-detail__badge--gold');
-    } else {
-      badge.style.display = 'none';
-    }
-  }
-
   /* Core info */
   set('pd-category', p.category);
   set('pd-name', p.name);
