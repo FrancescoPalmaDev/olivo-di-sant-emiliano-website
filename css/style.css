@@ -1355,7 +1355,7 @@ a.product-card__name:hover { color: var(--green); }
 /* ============================================
    PRODUCT DETAIL PAGE
    ============================================ */
-.product-detail { padding: 200px 0 80px; }
+.product-detail { padding: calc(88px + 24px) 0 80px; }
 .product-detail__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
