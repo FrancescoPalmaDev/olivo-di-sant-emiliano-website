@@ -1652,7 +1652,9 @@ a.product-card__name:hover { color: var(--green); }
   -webkit-backdrop-filter: blur(6px);
   padding: 12px 16px 14px;
   text-align: left;
+  transition: padding .3s ease;
 }
+.rec-card__img-wrap:hover .rec-card__overlay { padding-bottom: 18px; }
 .rec-card__name {
   display: block;
   font-family: var(--font-serif);
@@ -1668,6 +1670,30 @@ a.product-card__name:hover { color: var(--green); }
   color: var(--text-muted);
   font-weight: 400;
 }
+.rec-card__atc {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 8px 0;
+  background: var(--green);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity .25s ease, transform .25s ease, background .2s;
+}
+.rec-card__img-wrap:hover .rec-card__atc {
+  opacity: 1;
+  transform: translateY(0);
+}
+.rec-card__atc:hover { background: var(--green-dark); }
 .rec-arrow {
   position: absolute;
   top: calc(240px / 2);

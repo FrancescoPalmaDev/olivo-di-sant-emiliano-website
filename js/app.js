@@ -168,6 +168,7 @@ function renderRecommended(products, currentId) {
 
   track.innerHTML = others.map(p => {
     const minPrice = p.variants ? Math.min(...p.variants.map(v => v.price)) : p.price;
+    const defaultVariant = p.variants ? p.variants[p.variants.length - 1] : { size: p.size, price: p.price };
     return `
     <div class="rec-card">
       <a href="product.html?id=${esc(p.id)}" class="rec-card__img-wrap">
@@ -175,6 +176,11 @@ function renderRecommended(products, currentId) {
         <div class="rec-card__overlay">
           <div class="rec-card__name">${esc(p.name)}</div>
           <div class="rec-card__price">from $${minPrice}</div>
+          <button class="rec-card__atc add-to-cart"
+            data-name="${esc(p.name)}"
+            data-price="${defaultVariant.price}"
+            data-size="${esc(defaultVariant.size)}"
+            data-img="${esc(p.imageThumb)}">Add to Cart</button>
         </div>
       </a>
     </div>`;
