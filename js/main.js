@@ -203,6 +203,14 @@ document.querySelector('.newsletter__form')?.addEventListener('submit', e => {
   input.value = '';
 });
 
+/* ---- Buy Now ---- */
+document.addEventListener('click', e => {
+  const btn = e.target.closest('.buy-now');
+  if (!btn) return;
+  const price = parseFloat(btn.dataset.price).toFixed(2);
+  window.location.href = `https://www.paypal.com/paypalme/YOUR_PAYPAL_ME/${price}USD`;
+});
+
 /* ---- Init ---- */
 updateCartCount();
 renderCart();
