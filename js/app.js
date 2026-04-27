@@ -96,7 +96,22 @@ function renderProductDetail(products) {
   /* Core info */
   set('pd-category', p.category);
   set('pd-name', p.name);
-  setHTML('pd-price', `$${p.price} <span>/ ${esc(p.size)}</span>`);
+
+  /* Variants */
+  const firstVariant = (p.variants && p.variants[0]) || { size: p.size, price: p.price };
+  setHTML('pd-price', `$${firstVariant.price} <span>/ ${esc(firstVariant.size)}</span>`);
+  if (p.variants && p.variants.length) {
+    setHTML('pd-variants', `
+      <div class="product-variants__label">Size</div>
+      <div class="product-variants__options">
+        ${p.variants.map((v, i) => `
+          <button class="variant-btn${i === 0 ? ' active' : ''}"
+            data-size="${esc(v.size)}" data-price="${v.price}">
+            ${esc(v.size)}<span>$${v.price}</span>
+          </button>`).join('')}
+      </div>`);
+  }
+
   set('pd-desc', p.descLong);
 
   /* Image */
@@ -106,16 +121,16 @@ function renderProductDetail(products) {
   /* Add to Cart button */
   const addBtn = document.getElementById('pd-add-cart');
   if (addBtn) {
-    addBtn.textContent = p.buttonText || 'Add to Cart';
+    addBtn.textContent   = p.buttonText || 'Add to Cart';
     addBtn.dataset.name  = p.name;
-    addBtn.dataset.price = p.price;
-    addBtn.dataset.size  = p.size;
+    addBtn.dataset.price = firstVariant.price;
+    addBtn.dataset.size  = firstVariant.size;
     addBtn.dataset.img   = p.imageThumb;
   }
 
   /* Buy Now button */
   const buyBtn = document.getElementById('pd-buy-now');
-  if (buyBtn) buyBtn.dataset.price = p.price;
+  if (buyBtn) buyBtn.dataset.price = firstVariant.price;
 
   /* Specs */
   setHTML('pd-specs', p.specs.map(s => `
@@ -135,6 +150,22 @@ function renderProductDetail(products) {
       <p class="highlight-card__text">${esc(h.text)}</p>
     </div>`).join(''));
 }
+
+/* ---- Variant selection on product detail page ---- */
+document.addEventListener('click', e => {
+  const btn = e.target.closest('.variant-btn');
+  if (!btn) return;
+  btn.closest('.product-variants__options').querySelectorAll('.variant-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const price = btn.dataset.price;
+  const size  = btn.dataset.size;
+  const priceEl = document.getElementById('pd-price');
+  if (priceEl) priceEl.innerHTML = `$${price} <span>/ ${esc(size)}</span>`;
+  const addBtn = document.getElementById('pd-add-cart');
+  if (addBtn) { addBtn.dataset.price = price; addBtn.dataset.size = size; }
+  const buyBtn = document.getElementById('pd-buy-now');
+  if (buyBtn) buyBtn.dataset.price = price;
+});
 
 /* ---- Bootstrap ---- */
 (async () => {

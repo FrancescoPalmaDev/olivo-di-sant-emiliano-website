@@ -12,15 +12,16 @@
     "imageThumb": "https://images.unsplash.com/photo-1534353473418-4cfa6c56fd38?w=200&auto=format&fit=crop&q=80",
     "descShort": "Smooth and buttery with notes of fresh-cut grass, sweet almond, and a gentle peppery finish. Our everyday essential.",
     "descLong": "Our signature blend, crafted from a careful selection of Moraiolo, Frantoio, and Leccino olives harvested at peak ripeness from our family grove in the Trevi valley. Smooth and buttery on the palate, with delicate notes of fresh-cut grass, sweet almond, and a pleasingly gentle peppery finish. Versatile enough for everything from salad dressings to a simple drizzle over bread — this is the oil we reach for every single day.",
+    "variants": [
+      { "size": "250ml", "price": 18 },
+      { "size": "500ml", "price": 28 },
+      { "size": "1L",    "price": 48 }
+    ],
     "specs": [
-      { "label": "Volume",          "value": "500ml" },
       { "label": "Olive Varieties", "value": "Moraiolo, Frantoio, Leccino" },
       { "label": "Origin",          "value": "Trevi Valley, Umbria, Italy" },
       { "label": "Harvest",         "value": "October – November 2024" },
-      { "label": "Extraction",      "value": "Cold-pressed within 24h of harvest" },
-      { "label": "Free Acidity",    "value": "< 0.3%" },
-      { "label": "Best Used For",   "value": "Salads, pasta, grilled vegetables, bread" },
-      { "label": "Shipping",        "value": "Free on orders over $60" }
+      { "label": "Extraction",      "value": "Cold-pressed within 24h of harvest" }
     ],
     "highlightsLabel": "Tasting Profile",
     "highlightsTitle": "What You'll Taste",

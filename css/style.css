@@ -1400,6 +1400,45 @@ a.product-card__name:hover { color: var(--green); }
   font-family: var(--font-sans);
   font-weight: 400;
 }
+.product-variants { margin-bottom: 24px; }
+.product-variants__label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+.product-variants__options { display: flex; gap: 10px; flex-wrap: wrap; }
+.variant-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 20px;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+  transition: border-color .2s, background .2s, color .2s;
+}
+.variant-btn span {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+.variant-btn:hover { border-color: var(--green); }
+.variant-btn.active {
+  border-color: var(--green);
+  background: var(--green);
+  color: #fff;
+}
+.variant-btn.active span { color: rgba(255,255,255,.75); }
+
 .product-detail__desc {
   font-size: 1rem;
   color: var(--text-muted);
