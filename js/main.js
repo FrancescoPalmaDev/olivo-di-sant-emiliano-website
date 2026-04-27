@@ -30,7 +30,7 @@ const cartData = JSON.parse(localStorage.getItem('cart') || '[]');
 function saveCart() { localStorage.setItem('cart', JSON.stringify(cartData)); }
 const cartOverlay = document.querySelector('.cart-overlay');
 const cartSidebar = document.querySelector('.cart-sidebar');
-const cartClose = document.querySelector('.cart-close');
+const cartClose   = document.querySelector('.cart-close');
 const cartCountEl = document.querySelector('.nav__cart-count');
 
 function openCart() {
@@ -45,42 +45,28 @@ function closeCart() {
 }
 
 cartOverlay && cartOverlay.addEventListener('click', closeCart);
-cartClose && cartClose.addEventListener('click', closeCart);
+cartClose   && cartClose.addEventListener('click', closeCart);
+document.querySelector('.nav__cart')?.addEventListener('click', openCart);
 
 document.addEventListener('click', e => {
   if (e.target.closest('.cart-continue')) {
     closeCart();
+    return;
   }
-
   if (e.target.closest('.cart-checkout')) {
     if (cartData.length === 0) return;
     const total = cartData.reduce((s, i) => s + i.price * i.qty, 0).toFixed(2);
-    /* Replace YOUR_PAYPAL_ME with your actual PayPal.me username */
-    const paypalUrl = `https://www.paypal.com/paypalme/YOUR_PAYPAL_ME/${total}USD`;
     cartData.length = 0;
     saveCart();
     renderCart();
     updateCartCount();
     closeCart();
-    window.location.href = paypalUrl;
+    window.location.href = `https://www.paypal.com/paypalme/YOUR_PAYPAL_ME/${total}USD`;
   }
 });
-
-document.addEventListener('click', e => {
-  if (e.target.closest('.cart-continue')) closeCart();
-  if (e.target.closest('.cart-checkout')) {
-    if (cartData.length === 0) return;
-    showToast('Redirecting to checkout…');
-    setTimeout(() => {
-      window.location.href = 'shop.html';
-    }, 1000);
-  }
-});
-
-document.querySelector('.nav__cart')?.addEventListener('click', openCart);
 
 function renderCart() {
-  const body = document.querySelector('.cart-sidebar__body');
+  const body   = document.querySelector('.cart-sidebar__body');
   const footer = document.querySelector('.cart-sidebar__footer');
   if (!body) return;
 
@@ -113,10 +99,8 @@ function renderCart() {
       <div class="cart-item__price">$${(item.price * item.qty).toFixed(2)}</div>
     </div>`).join('');
 
-  const total = cartData.reduce((s, i) => s + i.price * i.qty, 0);
   const subtotalEl = document.querySelector('.cart-subtotal strong');
-  if (subtotalEl) subtotalEl.textContent = `$${total.toFixed(2)}`;
-  if (cartCountEl) cartCountEl.textContent = cartData.reduce((s, i) => s + i.qty, 0);
+  if (subtotalEl) subtotalEl.textContent = `$${cartData.reduce((s, i) => s + i.price * i.qty, 0).toFixed(2)}`;
 }
 
 window.changeQty = function(i, delta) {
@@ -148,7 +132,7 @@ function addToCart(name, price, size, img, qty = 1) {
   showToast(`${name} added to cart!`);
 }
 
-/* ---- Add to cart — event delegation (avoids apostrophe quoting issues) ---- */
+/* ---- Add to cart — event delegation ---- */
 document.addEventListener('click', e => {
   const btn = e.target.closest('.add-to-cart');
   if (!btn) return;
@@ -165,12 +149,8 @@ document.addEventListener('click', e => {
 
 /* ---- Toast ---- */
 function showToast(msg) {
-  let toast = document.querySelector('.toast');
-  if (!toast) {
-    toast = document.createElement('div');
-    toast.className = 'toast';
-    document.body.appendChild(toast);
-  }
+  const toast = document.querySelector('.toast');
+  if (!toast) return;
   toast.textContent = msg;
   toast.classList.add('show');
   setTimeout(() => toast.classList.remove('show'), 3000);
@@ -180,23 +160,19 @@ function showToast(msg) {
 const sortSelect = document.getElementById('sort');
 if (sortSelect) {
   const grid = document.querySelector('.shop-grid');
-
   sortSelect.addEventListener('change', () => {
     const cards = Array.from(grid.querySelectorAll('.product-card'));
     const val = sortSelect.value;
-
     cards.sort((a, b) => {
       const priceA = parseFloat(a.dataset.price);
       const priceB = parseFloat(b.dataset.price);
-      const idxA  = parseInt(a.dataset.index);
-      const idxB  = parseInt(b.dataset.index);
-
-      if (val === 'Price: Low to High')  return priceA - priceB;
-      if (val === 'Price: High to Low')  return priceB - priceA;
-      if (val === 'Newest')              return idxB - idxA;
-      return idxA - idxB; // Featured
+      const idxA   = parseInt(a.dataset.index);
+      const idxB   = parseInt(b.dataset.index);
+      if (val === 'Price: Low to High') return priceA - priceB;
+      if (val === 'Price: High to Low') return priceB - priceA;
+      if (val === 'Newest')             return idxB - idxA;
+      return idxA - idxB;
     });
-
     cards.forEach(c => grid.appendChild(c));
   });
 }
@@ -226,8 +202,7 @@ renderCart();
 const page = location.pathname.split('/').pop() || 'index.html';
 document.querySelectorAll('.nav__links a, .nav__mobile a').forEach(a => {
   const href = a.getAttribute('href');
-  if (href === page || (page === '' && href === 'index.html') ||
-      (page === 'index.html' && href === 'index.html')) {
+  if (href === page || (href === 'index.html' && page === 'index.html')) {
     a.classList.add('active');
   }
 });

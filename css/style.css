@@ -1390,19 +1390,6 @@ a.product-card__name:hover { color: var(--green); }
   object-fit: cover;
   border-radius: 10px;
 }
-.product-detail__badge {
-  display: inline-block;
-  background: var(--green);
-  color: var(--white);
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 5px 12px;
-  border-radius: 2px;
-  margin-bottom: 16px;
-}
-.product-detail__badge--gold { background: var(--gold); }
 .product-detail__category {
   font-size: 0.72rem;
   font-weight: 700;

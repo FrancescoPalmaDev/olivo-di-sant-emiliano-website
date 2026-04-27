@@ -4,14 +4,9 @@
    ============================================ */
 
 const ICONS = {
-  shield:   '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',
-  drop:     '<path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>',
-  star:     '<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>',
-  code:     '<path d="M7 17l-4-4 4-4M17 7l4 4-4 4M14 3l-4 18"/>',
-  clock:    '<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>',
-  home:     '<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>',
-  arrow:    '<path d="M5 12h14M12 5l7 7-7 7"/>',
-  question: '<circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/>',
+  shield: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',
+  drop:   '<path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>',
+  star:   '<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>',
 };
 
 /* Escape HTML special chars before inserting into innerHTML */
@@ -259,7 +254,7 @@ document.addEventListener('click', e => {
     const products = await res.json();
 
     const page = location.pathname.split('/').pop() || 'index.html';
-    if (page === '' || page === 'index.html') renderFeatured(products);
+    if (page === 'index.html') renderFeatured(products);
     else if (page === 'shop.html')            renderShop(products);
     else if (page === 'product.html')         renderProductDetail(products);
   } catch (e) {
