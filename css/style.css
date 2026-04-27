@@ -584,11 +584,26 @@ p:last-child { margin-bottom: 0; }
   transition: color 0.2s;
 }
 a.product-card__name:hover { color: var(--green); }
+.product-card__sizes {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.product-card__size-pill {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  background: #f0f0eb;
+  border-radius: 20px;
+  padding: 3px 9px;
+}
 .product-card__desc {
   font-size: 0.9rem;
   color: var(--text-muted);
   line-height: 1.55;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
   flex: 1;
   display: -webkit-box;
   -webkit-line-clamp: 3;

@@ -32,6 +32,14 @@ function cardHTML(p) {
   const badge = p.badge
     ? `<span class="product-card__badge${p.badgeType === 'gold' ? ' product-card__badge--gold' : ''}">${esc(p.badge)}</span>`
     : '';
+  const hasVariants = p.variants && p.variants.length > 1;
+  const minPrice = hasVariants ? Math.min(...p.variants.map(v => v.price)) : p.price;
+  const sizePills = hasVariants
+    ? `<div class="product-card__sizes">${p.variants.map(v => `<span class="product-card__size-pill">${esc(v.size)}</span>`).join('')}</div>`
+    : '';
+  const priceHTML = hasVariants
+    ? `<div class="product-card__price">from $${minPrice}</div>`
+    : `<div class="product-card__price">$${p.price} <span>/ ${esc(p.size)}</span></div>`;
   return `
     <div class="product-card" data-price="${p.price}" data-index="${p.sortIndex}">
       <div class="product-card__img-wrap">
@@ -44,8 +52,9 @@ function cardHTML(p) {
         <div class="product-card__category">${esc(p.category)}</div>
         <a href="product.html?id=${p.id}" class="product-card__name">${esc(p.name)}</a>
         <p class="product-card__desc">${esc(p.descShort)}</p>
+        ${sizePills}
         <div class="product-card__footer">
-          <div class="product-card__price">$${p.price} <span>/ ${esc(p.size)}</span></div>
+          ${priceHTML}
           <button class="btn btn--primary add-to-cart"
             data-name="${esc(p.name)}"
             data-price="${p.price}"
