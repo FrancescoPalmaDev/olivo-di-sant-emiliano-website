@@ -172,7 +172,7 @@ p:last-child { margin-bottom: 0; }
   padding: 0 24px;
   max-width: var(--max-w);
   margin: 0 auto;
-  transition: height 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: height 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav__logo {
   position: absolute;
@@ -186,7 +186,7 @@ p:last-child { margin-bottom: 0; }
   color: var(--green);
   letter-spacing: 0.18em;
   line-height: 1;
-  transition: font-size 0.45s cubic-bezier(0.4, 0, 0.2, 1), letter-spacing 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: font-size 0.8s cubic-bezier(0.4, 0, 0.2, 1), letter-spacing 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav__logo span {
   color: var(--gold);
