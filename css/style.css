@@ -3,7 +3,7 @@
    Main Stylesheet
    ============================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lato:wght@300;400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lato:wght@300;400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Cinzel:wght@400;600;700;900&display=swap');
 
 /* ---- Variables ---- */
 :root {
@@ -160,8 +160,8 @@ p:last-child { margin-bottom: 0; }
   height: 64px;
 }
 .nav.scrolled .nav__logo {
-  font-size: 1.4rem;
-  letter-spacing: 0.06em;
+  font-size: 1.5rem;
+  letter-spacing: 0.14em;
 }
 .nav__inner {
   display: flex;
@@ -179,12 +179,13 @@ p:last-child { margin-bottom: 0; }
   left: 50%;
   transform: translateX(-50%);
   white-space: nowrap;
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 1.85rem;
-  font-weight: 600;
-  font-style: italic;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 700;
+  font-style: normal;
   color: var(--green);
-  letter-spacing: 0.08em;
+  letter-spacing: 0.18em;
+  line-height: 1;
   transition: font-size 0.45s cubic-bezier(0.4, 0, 0.2, 1), letter-spacing 0.45s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav__logo span {
