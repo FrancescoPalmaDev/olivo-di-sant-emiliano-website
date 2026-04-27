@@ -13,9 +13,9 @@
     "descShort": "Smooth and buttery with notes of fresh-cut grass, sweet almond, and a gentle peppery finish. Our everyday essential.",
     "descLong": "Our signature blend, crafted from a careful selection of Moraiolo, Frantoio, and Leccino olives harvested at peak ripeness from our family grove in the Trevi valley. Smooth and buttery on the palate, with delicate notes of fresh-cut grass, sweet almond, and a pleasingly gentle peppery finish. Versatile enough for everything from salad dressings to a simple drizzle over bread — this is the oil we reach for every single day.",
     "variants": [
-      { "size": "250ml", "price": 18 },
+      { "size": "1L",    "price": 48 },
       { "size": "500ml", "price": 28 },
-      { "size": "1L",    "price": 48 }
+      { "size": "250ml", "price": 18 }
     ],
     "specs": [
       { "label": "Olive Varieties", "value": "Moraiolo, Frantoio, Leccino" },

@@ -132,12 +132,12 @@ function updateCartCount() {
   }
 }
 
-function addToCart(name, price, size, img) {
+function addToCart(name, price, size, img, qty = 1) {
   const existing = cartData.find(i => i.name === name && i.size === size);
   if (existing) {
-    existing.qty++;
+    existing.qty += qty;
   } else {
-    cartData.push({ name, price, size, img, qty: 1 });
+    cartData.push({ name, price, size, img, qty });
   }
   renderCart();
   updateCartCount();
@@ -148,11 +148,14 @@ function addToCart(name, price, size, img) {
 document.addEventListener('click', e => {
   const btn = e.target.closest('.add-to-cart');
   if (!btn) return;
+  const qtyEl = document.getElementById('pd-qty-value');
+  const qty = qtyEl ? parseInt(qtyEl.textContent) || 1 : 1;
   addToCart(
     btn.dataset.name,
     parseFloat(btn.dataset.price),
     btn.dataset.size,
-    btn.dataset.img
+    btn.dataset.img,
+    qty
   );
 });
 

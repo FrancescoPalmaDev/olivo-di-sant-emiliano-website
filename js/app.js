@@ -107,7 +107,8 @@ function renderProductDetail(products) {
         ${p.variants.map((v, i) => `
           <button class="variant-btn${i === 0 ? ' active' : ''}"
             data-size="${esc(v.size)}" data-price="${v.price}">
-            ${esc(v.size)}<span>$${v.price}</span>
+            <span class="variant-btn__size">${esc(v.size)}</span>
+            <span class="variant-btn__price">$${v.price}</span>
           </button>`).join('')}
       </div>`);
   }
@@ -165,6 +166,20 @@ document.addEventListener('click', e => {
   if (addBtn) { addBtn.dataset.price = price; addBtn.dataset.size = size; }
   const buyBtn = document.getElementById('pd-buy-now');
   if (buyBtn) buyBtn.dataset.price = price;
+  const qtyEl = document.getElementById('pd-qty-value');
+  if (qtyEl) qtyEl.textContent = '1';
+});
+
+/* ---- Quantity controls on product detail page ---- */
+document.addEventListener('click', e => {
+  const qtyEl = document.getElementById('pd-qty-value');
+  if (!qtyEl) return;
+  if (e.target.closest('.qty-minus')) {
+    const cur = parseInt(qtyEl.textContent);
+    if (cur > 1) qtyEl.textContent = cur - 1;
+  } else if (e.target.closest('.qty-plus')) {
+    qtyEl.textContent = parseInt(qtyEl.textContent) + 1;
+  }
 });
 
 /* ---- Bootstrap ---- */
