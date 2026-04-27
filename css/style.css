@@ -500,8 +500,11 @@ p:last-child { margin-bottom: 0; }
    ============================================ */
 .products {
   padding: 80px 0 100px;
-  background: var(--cream);
+  background: #1C2914;
 }
+.products .section-label { color: #fff; }
+.products .btn--outline { color: #fff; border-color: rgba(255,255,255,.4); }
+.products .btn--outline:hover { background: #fff; color: var(--green); }
 .products__header {
   display: flex;
   align-items: flex-end;
