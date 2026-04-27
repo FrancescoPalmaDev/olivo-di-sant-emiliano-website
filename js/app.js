@@ -171,11 +171,12 @@ function renderRecommended(products, currentId) {
     return `
     <div class="rec-card">
       <a href="product.html?id=${esc(p.id)}" class="rec-card__img-wrap">
-        <div class="rec-card__blob"></div>
         <img src="${esc(p.image)}" alt="${esc(p.name)}" class="rec-card__img" loading="lazy">
+        <div class="rec-card__overlay">
+          <div class="rec-card__name">${esc(p.name)}</div>
+          <div class="rec-card__price">from $${minPrice}</div>
+        </div>
       </a>
-      <a href="product.html?id=${esc(p.id)}" class="rec-card__name">${esc(p.name)}</a>
-      <div class="rec-card__price">from $${minPrice}</div>
     </div>`;
   }).join('');
 
