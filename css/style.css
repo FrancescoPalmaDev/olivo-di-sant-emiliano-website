@@ -969,7 +969,7 @@ a.product-card__name:hover { color: var(--green); }
 /* ============================================
    SHOP PAGE
    ============================================ */
-.shop-section { padding: 32px 0 48px; }
+.shop-section { padding: calc(88px + 24px) 0 48px; }
 .shop-toolbar {
   display: flex;
   align-items: center;
