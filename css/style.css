@@ -1634,7 +1634,7 @@ a.product-card__name:hover { color: var(--green); }
 .recommended__overflow {
   flex: 1;
   overflow: hidden;
-  max-width: 78%;
+  max-width: 88%;
   margin: 0 auto;
 }
 .recommended__track {
