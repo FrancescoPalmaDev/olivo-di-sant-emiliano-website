@@ -93,9 +93,6 @@ function renderProductDetail(products) {
   const set = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val; };
   const setHTML = (id, val) => { const el = document.getElementById(id); if (el) el.innerHTML = val; };
 
-  /* Breadcrumb */
-  set('pd-breadcrumb', p.name);
-
   /* Badge */
   const badge = document.getElementById('pd-badge');
   if (badge) {
